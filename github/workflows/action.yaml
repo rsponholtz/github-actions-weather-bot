@@ -1,10 +1,17 @@
 name: "Github Actions Weather Bot"
 
-on: push
-
+on: 
+  push:
+    branches:
+      - master
+  schedule:
+    -cron: '0 14 * * *'
+  
 jobs:
   bot:
+    runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v1
       - name: 'Install node'
         uses: actions/setup-node@v1
       - name: 'Install NPM dependencies'
