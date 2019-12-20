@@ -1,0 +1,4 @@
+name: "Github Actions Weather Bot"
+
+on: push
+
